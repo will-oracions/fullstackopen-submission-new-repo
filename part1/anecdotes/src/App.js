@@ -6,7 +6,7 @@ const Header = () => <div><h3>Anecdote of the day</h3></div>
 
 const Statistics = ({ anecdotes, points }) => {
   const mostVotedAnecdote = () => {
-    if (points.reduce((sum, n) => sum+n, 0) === 0) return <p>No vote registred.</p>
+    if (points.reduce((sum, n) => sum+n, 0) === 0) return <span>No vote registred.</span>
 
     return anecdotes[points.indexOf(Math.max(...points))];
   };
